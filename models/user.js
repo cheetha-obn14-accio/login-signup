@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+// const Schema = mongoose.Schema
 
 
 const userSchema = new mongoose.Schema({
@@ -15,8 +16,14 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, "Please provide a password"],
     },
+    token: {
+        type: String
+    }
+
 })
 
 const User = mongoose.model("User", userSchema);
+console.log(User)
+// users
 
 export default User;

@@ -1,14 +1,22 @@
 import express from 'express';
 import cors from 'cors';
 
+
+// middleware
+import hello from './middleware/hello.js';
+
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
+// app.use(hello)
+
 app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
+
+// 
 
 const PORT =  5047;
 
